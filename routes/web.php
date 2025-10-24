@@ -21,7 +21,6 @@ Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth')->n
 Route::get('/products', [\App\Http\Controllers\User\ProductController::class, 'index'])->name('user.products');
 Route::get('/products/{product}', [\App\Http\Controllers\User\ProductController::class, 'show'])->name('user.products.show');
 
-Route::get('/cats', [\App\Http\Controllers\User\CatController::class, 'index'])->name('user.cats');
 Route::get('/cats/{cat}/book', [\App\Http\Controllers\User\CatController::class, 'showBookingForm'])->name('user.cats.book');
 Route::post('/cats/{cat}/book', [\App\Http\Controllers\User\CatController::class, 'book'])->name('user.cats.book.store');
 

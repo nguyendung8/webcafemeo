@@ -105,7 +105,7 @@
                         <p class="product-desc">{{ $cat->personality }}</p>
                         <div style="display:flex;justify-content:space-between;align-items:center">
                             <span class="product-price">{{ number_format($cat->price, 0, ',', '.') }}đ/giờ</span>
-                            <a href="{{ auth()->check() ? '#' : route('login') }}" class="btn btn-sm" onclick="{{ auth()->check() ? "alert('Tính năng đặt lịch đang phát triển');return false" : '' }}">Đặt lịch</a>
+                            <a href="{{ auth()->check() ? route('user.cats.book', $cat) : route('login') }}" class="btn btn-sm">Đặt lịch</a>
                         </div>
                     </div>
                 </div>
